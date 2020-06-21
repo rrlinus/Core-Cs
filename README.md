@@ -27,7 +27,7 @@
 6. TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording
 
 
-**-- Creating tables**
+## -- Creating tables
 1.  CREATE TABLE student (  <br/>
    student_id INT PRIMARY KEY, <br/>
 
