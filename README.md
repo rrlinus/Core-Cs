@@ -16,7 +16,7 @@
 * SHOW DATABASES;
 
 
-### Basic data types in sql.
+## Basic data types in sql.
 
 1. INT              Whole Numbers
 2. DECIMAL(M,N)     Decimal Numbers - Exact value. 
@@ -28,11 +28,15 @@
 
 
 **-- Creating tables**
-1. - CREATE TABLE student (
-  - student_id INT PRIMARY KEY,
-  - name VARCHAR(40),
-  - major VARCHAR(40)
-  - -- PRIMARY KEY(student_id)
+1.  CREATE TABLE student (  <br/>
+   student_id INT PRIMARY KEY, <br/>
+
+   name VARCHAR(40),<br/>
+
+   major VARCHAR(40)<br/>
+
+   -- PRIMARY KEY(student_id)<br/>
+
 );
 
 2. **DESCRIBE student;**
