@@ -28,11 +28,11 @@
 
 
 **-- Creating tables**
-1. CREATE TABLE student (
-  student_id INT PRIMARY KEY,
-  name VARCHAR(40),
-  major VARCHAR(40)
-  -- PRIMARY KEY(student_id)
+1. - CREATE TABLE student (
+  - student_id INT PRIMARY KEY,
+  - name VARCHAR(40),
+  - major VARCHAR(40)
+  - -- PRIMARY KEY(student_id)
 );
 
 2. **DESCRIBE student;**
