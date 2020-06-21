@@ -15,4 +15,34 @@
 
 * SHOW DATABASES;
 
+
+### Basic data types in sql.
+
+1. INT              Whole Numbers
+2. DECIMAL(M,N)     Decimal Numbers - Exact value. 
+- Example:DECIMAL(10,4) total 10 digits where 4 digits comes after decimal points
+3. VARCHAR(l)       String of text of length l.
+4. BLOB             Binary large Objects, Stores large data. --like images
+5. DATE             'YYYY-MM-DD'
+6. TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording
  
+ 
+INT                           -- Whole Numbers
+DECIMAL(M,N)                  -- Decimal Numbers - Exact Value
+VARCHAR(l)                    -- String of text of length l
+BLOB                          -- Binary Large Object, Stores large data
+DATE                          -- 'YYYY-MM-DD'
+TIMESTAMP                     -- 'YYYY-MM-DD HH:MM:SS' - used for recording events
+
+**-- Creating tables**
+CREATE TABLE student (
+  student_id INT PRIMARY KEY,
+  name VARCHAR(40),
+  major VARCHAR(40)
+  -- PRIMARY KEY(student_id)
+);
+
+**DESCRIBE student;**
+**DROP TABLE student;**
+**ALTER TABLE student ADD gpa DECIMAL;**
+**ALTER TABLE student DROP COLUMN gpa;**
