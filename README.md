@@ -111,7 +111,7 @@ ERROR 1048 (23000): Column 'major' cannot be null<br/>
 Query OK, 0 rows affected (0.337 sec)<br/>
 Records: 0  Duplicates: 0  Warnings: 0<br/>
 
-MariaDB [db]> DESC student;<br/>
+7.**MariaDB [db]> DESC student;**<br/>
 +---------+-------------+------+-----+---------+-------+<br/>
 | Field   | Type        | Null | Key | Default | Extra |<br/>
 +---------+-------------+------+-----+---------+-------+<br/>
