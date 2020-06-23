@@ -28,17 +28,22 @@
 
 
 ## -- Creating tables
-1.  CREATE TABLE student (  <br/>
-   student_id INT PRIMARY KEY, <br/>
-
-   name VARCHAR(40),<br/>
-
-   major VARCHAR(40)<br/>
-
-   -- PRIMARY KEY(student_id)<br/>
+1.   CREATE TABLE student (  <br/>
+     student_id INT PRIMARY KEY, <br/>
+     name VARCHAR(40),<br/>
+     major VARCHAR(40)<br/>
+     -- PRIMARY KEY(student_id)<br/>
 
 );
 
+### output:
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| stu_id | int(11)     | NO   | PRI | NULL    |       |
+| name   | varchar(40) | YES  |     | NULL    |       |
+| major  | varchar(40) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
 2. **DESCRIBE student;**
 3. **DROP TABLE student;**
 4. **ALTER TABLE student ADD gpa DECIMAL;**
