@@ -125,3 +125,43 @@ Records: 0  Duplicates: 0  Warnings: 0<br/>
 1. Primary key will not accept NULL values whereas Unique key can accept one NULL value.<br/>
 2. A table can have only primary key whereas there can be multiple unique key on a table.<br/>
 3. A Clustered index automatically created when a primary key is defined whereas Unique key generates the non-clustered index.<br/>
+
+## UPDATE & DELETE
+
+
+1. **MariaDB [db]> UPDATE student SET major='computer' where major='CSE';**<br/>
+Query OK, 1 row affected (0.375 sec)<br/>
+Rows matched: 1  Changed: 1  Warnings: 0<br/>
+
+2. **MariaDB [db]> SELECT * FROM student;**<br/>
++--------+--------+----------+---------+<br/>
+| stu_id | name   | major    | Payment |<br/>
++--------+--------+----------+---------+<br/>
+|      1 | Amrit  | computer |       0 |<br/>
+|      3 | Shivam |          |       0 |<br/>
++--------+--------+----------+---------+<br/>
+2 rows in set (0.000 sec)<br/>
+
+3. **MariaDB [db]> UPDATE student SET Payment=20,stu_id=2 WHERE stu_id=3;**<br/>
+Query OK, 1 row affected (0.197 sec)<br/>
+Rows matched: 1  Changed: 1  Warnings: 0<br/>
+
+4. **MariaDB [db]> SELECT * FROM student;<br/>**
++--------+--------+----------+---------+<br/>
+| stu_id | name   | major    | Payment |<br/>
++--------+--------+----------+---------+<br/>
+|      1 | Amrit  | computer |       0 |<br/>
+|      2 | Shivam | Bio      |      20 |<br/>
++--------+--------+----------+---------+<br/>
+2 rows in set (0.000 sec)<br/>
+
+5. **MariaDB [db]> DELETE FROM student where stu_id=1;**<br/>
+Query OK, 1 row affected (0.379 sec)<br/>
+
+6. **MariaDB [db]> SELECT * FROM student;**<br/>
++--------+--------+-------+---------+<br/>
+| stu_id | name   | major | Payment |<br/>
++--------+--------+-------+---------+<br/>
+|      2 | Shivam | Bio   |      20 |<br/>
++--------+--------+-------+---------+<br/>
+1 row in set (0.000 sec)<br/>
