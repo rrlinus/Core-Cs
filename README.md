@@ -44,7 +44,41 @@
 | name   | varchar(40) | YES  |     | NULL    |       |<br/>
 | major  | varchar(40) | YES  |     | NULL    |       |<br/>
 +--------+-------------+------+-----+---------+-------+<br/>
-2. **DESCRIBE student;**
-3. **DROP TABLE student;**
-4. **ALTER TABLE student ADD gpa DECIMAL;**
-5. **ALTER TABLE student DROP COLUMN gpa;**
+1. **DESCRIBE student;** --TO describe Table of student or desc structure of the table.
+2. **DROP TABLE student;** --remove table from database(warn)
+3. **ALTER TABLE student ADD gpa DECIMAL;** --add column gpa
+4. **ALTER TABLE student DROP COLUMN gpa;**  --remove column gpa
+
+## INSERT 
+1. **INSERT INTO student VALUES(1,"RAKESH",'CSE');**<br/>
+Query OK, 1 row affected (0.207 sec)<br/>
+
+2. **MariaDB [db]> DESC student;**<br/>
++--------+-------------+------+-----+---------+-------+<br/>
+| Field  | Type        | Null | Key | Default | Extra |<br/>
++--------+-------------+------+-----+---------+-------+<br/>
+| stu_id | int(11)     | NO   | PRI | NULL    |       |<br/>
+| name   | varchar(40) | YES  |     | NULL    |       |<br/>
+| major  | varchar(40) | YES  |     | NULL    |       |<br/>
++--------+-------------+------+-----+---------+-------+<br/>
+3 rows in set (0.329 sec)<br/>
+
+3. **SELECT * FROM student;** --TO Show table<br/>
++--------+--------+-------+<br/>
+| stu_id | name   | major |<br/>
++--------+--------+-------+<br/>
+|      1 | RAKESH | CSE   |<br/>
++--------+--------+-------+<br/>
+1 row in set (0.071 sec)<br/>
+
+4. **INSERT INTO student(stu_id,name) values(2,"SANTOSH");**<br/>
+Query OK, 1 row affected (0.135 sec)<br/>
+
+SELECT * FROM student;<br/>
++--------+---------+-------+<br/>
+| stu_id | name    | major |<br/>
++--------+---------+-------+<br/>
+|      1 | RAKESH  | CSE   |<br/>
+|      2 | SANTOSH | NULL  |<br/>
++--------+---------+-------+<br/>
+2 rows in set (0.000 sec)<br/>
