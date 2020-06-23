@@ -74,7 +74,7 @@ Query OK, 1 row affected (0.207 sec)<br/>
 4. **INSERT INTO student(stu_id,name) values(2,"SANTOSH");**<br/>
 Query OK, 1 row affected (0.135 sec)<br/>
 
-SELECT * FROM student;<br/>
+5. SELECT * FROM student;<br/>
 +--------+---------+-------+<br/>
 | stu_id | name    | major |<br/>
 +--------+---------+-------+<br/>
@@ -82,3 +82,46 @@ SELECT * FROM student;<br/>
 |      2 | SANTOSH | NULL  |<br/>
 +--------+---------+-------+<br/>
 2 rows in set (0.000 sec)<br/>
+## CONSTRAINTS
+1. **CREATE TABLE student**(<br/>
+     stu_id INT PRIMARY KEY,<br/>
+     name VARCHAR(40) UNIQUE,<br/>
+     major VARCHAR(40) NOT NULL,<br/>
+     );<br/>
+Query OK, 0 rows affected (0.579 sec)<br/>
+
+2. **MariaDB [db]> DESC student;**<br/>
++--------+-------------+------+-----+---------+-------+<br/>
+| Field  | Type        | Null | Key | Default | Extra |<br/>
++--------+-------------+------+-----+---------+-------+<br/>
+| stu_id | int(11)     | NO   | PRI | NULL    |       |<br/>
+| name   | varchar(40) | YES  | UNI | NULL    |       |<br/>
+| major  | varchar(40) | NO   |     | NULL    |       |<br/>
++--------+-------------+------+-----+---------+-------+<br/>
+3 rows in set (0.355 sec)<br/>
+
+3. **MariaDB [db]> INSERT INTO student values(1,"Amrit","CSE");** <br/>
+Query OK, 1 row affected (0.310 sec)<br/>
+
+4. **MariaDB [db]> INSERT INTO student values(1,"Amrit","BIOLOGY");**<br/>
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'<br/>
+5. **MariaDB [db]> INSERT INTO student values(4,"Amrit",NULL);**<br/>
+ERROR 1048 (23000): Column 'major' cannot be null<br/>
+6. **MariaDB [db]> ALTER TABLE student add Payment INT DEFAULT 0;**<br/>
+Query OK, 0 rows affected (0.337 sec)<br/>
+Records: 0  Duplicates: 0  Warnings: 0<br/>
+
+MariaDB [db]> DESC student;<br/>
++---------+-------------+------+-----+---------+-------+<br/>
+| Field   | Type        | Null | Key | Default | Extra |<br/>
++---------+-------------+------+-----+---------+-------+<br/>
+| stu_id  | int(11)     | NO   | PRI | NULL    |       |<br/>
+| name    | varchar(40) | YES  | UNI | NULL    |       |<br/>
+| major   | varchar(40) | NO   |     | NULL    |       |<br/>
+| Payment | int(11)     | YES  |     | 0       |       |<br/>
++---------+-------------+------+-----+---------+-------+<br/>
+4 rows in set (0.033 sec)<br/>
+**NOTE**
+1. Primary key will not accept NULL values whereas Unique key can accept one NULL value.<br/>
+2. A table can have only primary key whereas there can be multiple unique key on a table.<br/>
+3. A Clustered index automatically created when a primary key is defined whereas Unique key generates the non-clustered index.<br/>
