@@ -37,13 +37,13 @@
 );
 
 ### output:
-+--------+-------------+------+-----+---------+-------+
-| Field  | Type        | Null | Key | Default | Extra |
-+--------+-------------+------+-----+---------+-------+
-| stu_id | int(11)     | NO   | PRI | NULL    |       |
-| name   | varchar(40) | YES  |     | NULL    |       |
-| major  | varchar(40) | YES  |     | NULL    |       |
-+--------+-------------+------+-----+---------+-------+
++--------+-------------+------+-----+---------+-------+<br/>
+| Field  | Type        | Null | Key | Default | Extra |<br/>
++--------+-------------+------+-----+---------+-------+<br/>
+| stu_id | int(11)     | NO   | PRI | NULL    |       |<br/>
+| name   | varchar(40) | YES  |     | NULL    |       |<br/>
+| major  | varchar(40) | YES  |     | NULL    |       |<br/>
++--------+-------------+------+-----+---------+-------+<br/>
 2. **DESCRIBE student;**
 3. **DROP TABLE student;**
 4. **ALTER TABLE student ADD gpa DECIMAL;**
