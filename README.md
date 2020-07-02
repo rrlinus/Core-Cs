@@ -50,7 +50,7 @@ can be numbers, text or dates.</i></h3>
 <h2>CASE</h2>
 <h3><i>CASE statements are used to create different outputs (usually in the SELECT statement). It
 is SQL's way of handling if-then logic.
-<h4><code>SELECT column_name,</i></h3>
+<h4><code>SELECT column_name,
 CASE
 WHEN condition1 THEN 'Result_1'
 WHEN condition2 THEN 'Result_2'
