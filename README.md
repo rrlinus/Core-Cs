@@ -27,8 +27,8 @@
 6. TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording
 
 ## Sql Commands
-**ALTER TABLE:**
-ALTER TABLE lets you add columns to a table in a database.
+<h1>ALTER TABLE:</h1>
+<h2>ALTER TABLE lets you add columns to a table in a database.</h2>
 ALTER TABLE table_name ADD column_name datatype;
 **AND**
 <p>AND is an operator that combines two conditions. Both conditions must be true for the row
