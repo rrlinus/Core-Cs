@@ -49,7 +49,7 @@ can be numbers, text or dates.</i></h4>
 <code>SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value_1 AND value_2;</></code>
 <h3>CASE</h3>
 <h4><i>CASE statements are used to create different outputs (usually in the SELECT statement). It
-is SQL's way of handling if-then logic.
+is SQL's way of handling if-then logic.</i></h4>
 <code>SELECT column_name,
 CASE
 WHEN condition1 THEN 'Result_1'
