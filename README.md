@@ -18,13 +18,13 @@
 
 <h3>Basic data types in sql.</h3>
 <ul>
-<li> INT              Whole Numbers</></li>
-<li> DECIMAL(M,N)     Decimal Numbers - Exact value. </></li>
-- Example:DECIMAL(10,4) total 10 digits where 4 digits comes after decimal points</></li>
-<li> VARCHAR(l)       String of text of length l.</></li>
-<li> BLOB             Binary large Objects, Stores large data. --like images</></li>
-<li> DATE             'YYYY-MM-DD'</></li>
-<li>TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording</></li>
+<li> <code>INT</code>              Whole Numbers</></li>
+<li><code> DECIMAL(M,N)</code>      Decimal Numbers - Exact value. </></li>
+ <h5>Example:DECIMAL(10,4) total 10 digits where 4 digits comes after decimal points</h5>
+<li><code> VARCHAR(l)</code>        String of text of length l.</></li>
+<li><code> BLOB      </code>        Binary large Objects, Stores large data. --like images</></li>
+<li><code> DATE    </code>          'YYYY-MM-DD'</></li>
+<li><code>TIMESTAMP </code>         'YYYY-MM-DD  HH:MM:SS' -used for recording</></li>
 </ul>
 <h1>Sql Commands<h1>
 <h3>ALTER TABLE:</h3>
