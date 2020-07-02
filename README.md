@@ -3,14 +3,14 @@
 
 
 
-### DBMS
+<h2> DBMS</h2>
 
-* To start MySql Server run this command in your command prompt (Path of the file may be different I am doing this for general case);
+<h4><i>To start MySql Server run this command in your command prompt (Path of the file may be different I am doing this for general case);</i></h4>
 
-1. C:\>cd xampp
-  - C:\xampp>cd MySQL 
-    - C:\xampp\mysql>cd bin 
-     - C:\xampp\mysql\bin>mysql -h localhost -u root
+ - <code>C:\>cd xampp</code>
+  - <code>C:\xampp>cd MySQL </code>
+    - <code>C:\xampp\mysql>cd bin </code>
+     - <code>C:\xampp\mysql\bin>mysql -h localhost -u root</code>
 <h5><i> Hit ENTER if the password is an empty string. Now you are in. You can list all available databases, and select one using the fallowing:</h5></i>
 
 <h5><code> SHOW DATABASES;</code></h5>
