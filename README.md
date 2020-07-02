@@ -11,21 +11,21 @@
   - C:\xampp>cd MySQL 
     - C:\xampp\mysql>cd bin 
      - C:\xampp\mysql\bin>mysql -h localhost -u root
-* Hit ENTER if the password is an empty string. Now you are in. You can list all available databases, and select one using the fallowing:
+<h4><i> Hit ENTER if the password is an empty string. Now you are in. You can list all available databases, and select one using the fallowing:</h4></i>
 
-* SHOW DATABASES;
+<h4><code> SHOW DATABASES;</code></h4>
 
 
-## Basic data types in sql.
-
-1. INT              Whole Numbers
-2. DECIMAL(M,N)     Decimal Numbers - Exact value. 
-- Example:DECIMAL(10,4) total 10 digits where 4 digits comes after decimal points
-3. VARCHAR(l)       String of text of length l.
-4. BLOB             Binary large Objects, Stores large data. --like images
-5. DATE             'YYYY-MM-DD'
-6. TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording
-
+<h2>Basic data types in sql.</h2>
+<ul>
+<li><h4> INT              Whole Numbers</h4></li>
+<li><h4> DECIMAL(M,N)     Decimal Numbers - Exact value. </h4></li>
+- Example:DECIMAL(10,4) total 10 digits where 4 digits comes after decimal points</h4></li>
+<li><h4> VARCHAR(l)       String of text of length l.</h4></li>
+<li><h4> BLOB             Binary large Objects, Stores large data. --like images</h4></li>
+<li><h4> DATE             'YYYY-MM-DD'</h4></li>
+<li><h4>TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording</h4></li>
+</ul>
 <h1>Sql Commands<h1>
 <h2>ALTER TABLE:</h2>
 <h3><i>ALTER TABLE lets you add columns to a table in a database.</i></h3>
