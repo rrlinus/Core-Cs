@@ -27,7 +27,7 @@
 6. TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording
 
 <h1>Sql Commands<h1>
-<h2>ALTER TABLE:</h2>
+<h2 style="color:yellow">ALTER TABLE:</h2>
 <h3>ALTER TABLE lets you add columns to a table in a database.</h3>
 <h4>ALTER TABLE table_name ADD column_name datatype;</h4>
 **AND**
