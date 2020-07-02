@@ -26,142 +26,134 @@
 5. DATE             'YYYY-MM-DD'
 6. TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording
 
+## Sql Commands
+**ALTER TABLE:**
+ALTER TABLE lets you add columns to a table in a database.
+ALTER TABLE table_name ADD column_name datatype;
+**AND**
+<p>AND is an operator that combines two conditions. Both conditions must be true for the row
+to be included in the result set.<p>
+<p>SELECT column_name(s) FROM table_name WHERE column_1 = value_1 AND column_2 =
+value_2;</p>
+<p>Select gender from Person</p>
 
-## -- Creating tables
-1.   CREATE TABLE student (  <br/>
-     student_id INT PRIMARY KEY, <br/>
-     name VARCHAR(40),<br/>
-     major VARCHAR(40)<br/>
-     -- PRIMARY KEY(student_id)<br/>
-
+ **AS**
+ <p>AS is a keyword in SQL that allows you to rename a column or table using an alias.
+SELECT column_name AS 'Alias' FROM table_name;<p>
+AVG()
+AVG() is an aggregate function that returns the average value for a numeric column.
+SELECT AVG(column_name) FROM table_name;
+BETWEEN
+The BETWEEN operator is used to filter the result set within a certain range. The values
+can be numbers, text or dates.
+SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value_1 AND value_2;
+CASE
+CASE statements are used to create different outputs (usually in the SELECT statement). It
+is SQL's way of handling if-then logic.
+SELECT column_name,
+CASE
+WHEN condition1 THEN 'Result_1'
+WHEN condition2 THEN 'Result_2'
+ELSE 'Result_3'
+END
+FROM table_name;
+COUNT()
+COUNT() is a function that takes the name of a column as an argument and counts the
+number of rows where the column is not NULL.
+SELECT COUNT(column_name) FROM table_name;
+CREATE TABLE
+CREATE TABLE creates a new table in the database. It allows you to specify the name of
+the table and the name of each column in the table.
+CREATE TABLE table_name (
+column_1 datatype,
+column_2 datatype,
+column_3 datatype
 );
-
-### output:
-+--------+-------------+------+-----+---------+-------+<br/>
-| Field  | Type        | Null | Key | Default | Extra |<br/>
-+--------+-------------+------+-----+---------+-------+<br/>
-| stu_id | int(11)     | NO   | PRI | NULL    |       |<br/>
-| name   | varchar(40) | YES  |     | NULL    |       |<br/>
-| major  | varchar(40) | YES  |     | NULL    |       |<br/>
-+--------+-------------+------+-----+---------+-------+<br/>
-1. **DESCRIBE student;** --TO describe Table of student or desc structure of the table.
-2. **DROP TABLE student;** --remove table from database(warn)
-3. **ALTER TABLE student ADD gpa DECIMAL;** --add column gpa
-4. **ALTER TABLE student DROP COLUMN gpa;**  --remove column gpa
-
-## INSERT 
-1. **INSERT INTO student VALUES(1,"RAKESH",'CSE');**<br/>
-Query OK, 1 row affected (0.207 sec)<br/>
-
-2. **MariaDB [db]> DESC student;**<br/>
-+--------+-------------+------+-----+---------+-------+<br/>
-| Field  | Type        | Null | Key | Default | Extra |<br/>
-+--------+-------------+------+-----+---------+-------+<br/>
-| stu_id | int(11)     | NO   | PRI | NULL    |       |<br/>
-| name   | varchar(40) | YES  |     | NULL    |       |<br/>
-| major  | varchar(40) | YES  |     | NULL    |       |<br/>
-+--------+-------------+------+-----+---------+-------+<br/>
-3 rows in set (0.329 sec)<br/>
-
-3. **SELECT * FROM student;** --TO Show table<br/>
-+--------+--------+-------+<br/>
-| stu_id | name   | major |<br/>
-+--------+--------+-------+<br/>
-|      1 | RAKESH | CSE   |<br/>
-+--------+--------+-------+<br/>
-1 row in set (0.071 sec)<br/>
-
-4. **INSERT INTO student(stu_id,name) values(2,"SANTOSH");**<br/>
-Query OK, 1 row affected (0.135 sec)<br/>
-
-5. SELECT * FROM student;<br/>
-+--------+---------+-------+<br/>
-| stu_id | name    | major |<br/>
-+--------+---------+-------+<br/>
-|      1 | RAKESH  | CSE   |<br/>
-|      2 | SANTOSH | NULL  |<br/>
-+--------+---------+-------+<br/>
-2 rows in set (0.000 sec)<br/>
-## CONSTRAINTS
-1. **CREATE TABLE student**(<br/>
-     stu_id INT PRIMARY KEY,<br/>
-     name VARCHAR(40) UNIQUE,<br/>
-     major VARCHAR(40) NOT NULL,<br/>
-     );<br/>
-Query OK, 0 rows affected (0.579 sec)<br/>
-
-2. **MariaDB [db]> DESC student;**<br/>
-+--------+-------------+------+-----+---------+-------+<br/>
-| Field  | Type        | Null | Key | Default | Extra |<br/>
-+--------+-------------+------+-----+---------+-------+<br/>
-| stu_id | int(11)     | NO   | PRI | NULL    |       |<br/>
-| name   | varchar(40) | YES  | UNI | NULL    |       |<br/>
-| major  | varchar(40) | NO   |     | NULL    |       |<br/>
-+--------+-------------+------+-----+---------+-------+<br/>
-3 rows in set (0.355 sec)<br/>
-
-3. **MariaDB [db]> INSERT INTO student values(1,"Amrit","CSE");** <br/>
-Query OK, 1 row affected (0.310 sec)<br/>
-
-4. **MariaDB [db]> INSERT INTO student values(1,"Amrit","BIOLOGY");**<br/>
-ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'<br/>
-5. **MariaDB [db]> INSERT INTO student values(4,"Amrit",NULL);**<br/>
-ERROR 1048 (23000): Column 'major' cannot be null<br/>
-6. **MariaDB [db]> ALTER TABLE student add Payment INT DEFAULT 0;**<br/>
-Query OK, 0 rows affected (0.337 sec)<br/>
-Records: 0  Duplicates: 0  Warnings: 0<br/>
-
-7.**MariaDB [db]> DESC student;**<br/>
-+---------+-------------+------+-----+---------+-------+<br/>
-| Field   | Type        | Null | Key | Default | Extra |<br/>
-+---------+-------------+------+-----+---------+-------+<br/>
-| stu_id  | int(11)     | NO   | PRI | NULL    |       |<br/>
-| name    | varchar(40) | YES  | UNI | NULL    |       |<br/>
-| major   | varchar(40) | NO   |     | NULL    |       |<br/>
-| Payment | int(11)     | YES  |     | 0       |       |<br/>
-+---------+-------------+------+-----+---------+-------+<br/>
-4 rows in set (0.033 sec)<br/>
-**NOTE**
-1. Primary key will not accept NULL values whereas Unique key can accept one NULL value.<br/>
-2. A table can have only primary key whereas there can be multiple unique key on a table.<br/>
-3. A Clustered index automatically created when a primary key is defined whereas Unique key generates the non-clustered index.<br/>
-
-## UPDATE & DELETE
-
-
-1. **MariaDB [db]> UPDATE student SET major='computer' where major='CSE';**<br/>
-Query OK, 1 row affected (0.375 sec)<br/>
-Rows matched: 1  Changed: 1  Warnings: 0<br/>
-
-2. **MariaDB [db]> SELECT * FROM student;**<br/>
-+--------+--------+----------+---------+<br/>
-| stu_id | name   | major    | Payment |<br/>
-+--------+--------+----------+---------+<br/>
-|      1 | Amrit  | computer |       0 |<br/>
-|      3 | Shivam |          |       0 |<br/>
-+--------+--------+----------+---------+<br/>
-2 rows in set (0.000 sec)<br/>
-
-3. **MariaDB [db]> UPDATE student SET Payment=20,stu_id=2 WHERE stu_id=3;**<br/>
-Query OK, 1 row affected (0.197 sec)<br/>
-Rows matched: 1  Changed: 1  Warnings: 0<br/>
-
-4. **MariaDB [db]> SELECT * FROM student;<br/>**
-+--------+--------+----------+---------+<br/>
-| stu_id | name   | major    | Payment |<br/>
-+--------+--------+----------+---------+<br/>
-|      1 | Amrit  | computer |       0 |<br/>
-|      2 | Shivam | Bio      |      20 |<br/>
-+--------+--------+----------+---------+<br/>
-2 rows in set (0.000 sec)<br/>
-
-5. **MariaDB [db]> DELETE FROM student where stu_id=1;**<br/>
-Query OK, 1 row affected (0.379 sec)<br/>
-
-6. **MariaDB [db]> SELECT * FROM student;**<br/>
-+--------+--------+-------+---------+<br/>
-| stu_id | name   | major | Payment |<br/>
-+--------+--------+-------+---------+<br/>
-|      2 | Shivam | Bio   |      20 |<br/>
-+--------+--------+-------+---------+<br/>
-1 row in set (0.000 sec)<br/>
+DELETE
+DELETE statements are used to remove rows from a table.
+DELETE FROM table_name WHERE some_column = some_value;
+GROUP BY
+GROUP BY is a clause in SQL that is only used with aggregate functions. It is used in
+collaboration with the SELECT statement to arrange identical data into groups.
+SELECT column_name, COUNT(*)
+FROM table_name
+GROUP BY column_name;
+HAVING
+HAVING was added to SQL because the WHERE keyword could not be used with
+aggregate functions.
+SELECT column_name, COUNT(*)
+FROM table_name
+GROUP BY column_name
+HAVING COUNT(*) > value;
+INNER JOIN
+An inner join will combine rows from different tables if the join condition is true.
+SELECT column_name(s)
+FROM table_1
+JOIN table_2
+ON table_1.column_name = table_2.column_name;
+INSERT
+INSERT statements are used to add a new row to a table.
+INSERT INTO table_name (column_1, column_2, column_3) VALUES (value_1, 'value_2',
+value_3);
+IS NULL / IS NOT NULL
+IS NULL and IS NOT NULL are operators used with the WHERE clause to test for empty
+values.
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IS NULL;
+LIKE
+LIKE is a special operator used with the WHERE clause to search for a specific pattern in a
+column.
+SELECT column_name(s) FROM table_name WHERE column_name LIKE pattern;
+LIMIT
+LIMIT is a clause that lets you specify the maximum number of rows the result set will have.
+SELECT column_name(s) FROM table_name LIMIT number;
+MAX()
+MAX() is a function that takes the name of a column as an argument and returns the largest
+value in that column.
+SELECT MAX(column_name) FROM table_name;
+MIN()
+MIN() is a function that takes the name of a column as an argument and returns the
+smallest value in that column.
+SELECT MIN(column_name) FROM table_name;
+OR
+OR is an operator that filters the result set to only include rows where either condition is
+true.
+SELECT column_name FROM table_name WHERE column_name = value_1 OR column_name =
+value_2;
+ORDER BY
+ORDER BY is a clause that indicates you want to sort the result set by a particular column
+either alphabetically or numerically.
+SELECT column_name FROM table_name ORDER BY column_name ASC | DESC;
+OUTER JOIN
+An outer join will combine rows from different tables even if the join condition is not met.
+Every row in the left table is returned in the result set, and if the join condition is not met,
+then NULL values are used to fill in the columns from the right table.
+LEFT OUTER JOIN
+SELECT column_name(s) FROM table_1
+LEFT JOIN table_2
+ON table_1.column_name = table_2.column_name;
+ROUND()
+ROUND() is a function that takes a column name and an integer as an argument. It rounds
+the values in the column to the number of decimal places specified by the integer.
+SELECT ROUND(column_name, integer) FROM table_name;
+SELECT
+SELECT statements are used to fetch data from a database. Every query will begin with
+SELECT.
+SELECT column_name FROM table_name;
+SELECT DISTINCT
+SELECT DISTINCT specifies that the statement is going to be a query that returns unique
+values in the specified column(s).
+SELECT DISTINCT column_name FROM table_name;
+SUM
+SUM() is a function that takes the name of a column as an argument and returns the sum of
+all the values in that column.
+SELECT SUM(column_name) FROM table_name;
+UPDATE
+UPDATE statements allow you to edit rows in a table.
+UPDATE table_name SET some_column = some_value WHERE some_column = some_value;
+UPDATE movies SET movie_title = "NewMovieTitle" WHERE movie_year = "1977"
+WHERE
+WHERE is a clause that indicates you want to filter the result set to include only rows where
+the following condition is true.
+Select names from Person where gender = ‘Female’
