@@ -3,10 +3,10 @@
 <blockquote><strong>Do you have less time for your interview preperation then you are at the right place. please follow this article  and finally  you will find that in less time you have covered almost all the  important topics related to core-cs.</strong></blockquote>
 
 <blockquote>
-<a href = "mailto: rrlinus5@gmail.com">Send Email at rrlinus5@gmail.com</a>
-<a href = "tel:+919304180922">Call me at +919304180922</a>
-<a href = "https://www.linkedin.com/in/rakesh-raj-15a64916b/">Linkedin</a>
-<blockquote>
+<a href = "mailto: rrlinus5@gmail.com">Send Email at rrlinus5@gmail.com</a></br>
+<a href = "tel:+919304180922">Call me at +919304180922</a></br>
+<a href = "https://www.linkedin.com/in/rakesh-raj-15a64916b/">Linkedin</a></br>
+</blockquote>
 
 <strong><i>Note:currently-- I am working on this repo.</i></strong>
 
