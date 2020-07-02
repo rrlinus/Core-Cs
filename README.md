@@ -26,10 +26,10 @@
 5. DATE             'YYYY-MM-DD'
 6. TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording
 
-## Sql Commands
-<h1>ALTER TABLE:</h1>
-<h2>ALTER TABLE lets you add columns to a table in a database.</h2>
-ALTER TABLE table_name ADD column_name datatype;
+<h1>Sql Commands<h1>
+<h2>ALTER TABLE:</h2>
+<h3>ALTER TABLE lets you add columns to a table in a database.</h3>
+<h4>ALTER TABLE table_name ADD column_name datatype;</h4>
 **AND**
 <p>AND is an operator that combines two conditions. Both conditions must be true for the row
 to be included in the result set.<p>
