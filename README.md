@@ -62,8 +62,8 @@ FROM table_name;</h4></code>
 number of rows where the column is not NULL.</i></h3>
 <h4><code>SELECT COUNT(column_name) FROM table_name;</h4></code>
 <h2>CREATE TABLE</h2>
-<h4><code>CREATE TABLE creates a new table in the database. It allows you to specify the name of
-the table and the name of each column in the table.
+<h3><i>CREATE TABLE creates a new table in the database. It allows you to specify the name of
+the table and the name of each column in the table.</i></h3>
 <h4><code>CREATE TABLE table_name (
 column_1 datatype,
 column_2 datatype,
