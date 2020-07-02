@@ -27,17 +27,17 @@
 6. TIMESTAMP         'YYYY-MM-DD  HH:MM:SS' -used for recording
 
 <h1>Sql Commands<h1>
-<h2 style="color:yellow">ALTER TABLE:</h2>
+<h2>ALTER TABLE:</h2>
 <h3>ALTER TABLE lets you add columns to a table in a database.</h3>
 <h4>ALTER TABLE table_name ADD column_name datatype;</h4>
-**AND**
-<p>AND is an operator that combines two conditions. Both conditions must be true for the row
-to be included in the result set.<p>
-<p>SELECT column_name(s) FROM table_name WHERE column_1 = value_1 AND column_2 =
-value_2;</p>
-<p>Select gender from Person</p>
+<h2>AND</h2>
+<h3>AND is an operator that combines two conditions. Both conditions must be true for the row
+to be included in the result set.</h3>
+<h4><code>SELECT column_name(s) FROM table_name WHERE column_1 = value_1 AND column_2 =
+value_2;</code></h4>
+<h4><code>Select gender from Person</code></h4>
 
- **AS**
+<h2>AS</h2>
  <p>AS is a keyword in SQL that allows you to rename a column or table using an alias.
 SELECT column_name AS 'Alias' FROM table_name;<p>
 AVG()
