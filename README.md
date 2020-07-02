@@ -129,7 +129,7 @@ either alphabetically or numerically.<i></p>
 <p><i>An outer join will combine rows from different tables even if the join condition is not met.<i></p>
 <p><i>Every row in the left table is returned in the result set, and if the join condition is not met,
 then NULL values are used to fill in the columns from the right table.<i></p>
-LEFT OUTER JOIN
+<h5>LEFT OUTER JOIN</h5>
 <code>SELECT column_name(s) FROM table_1
 LEFT JOIN table_2
 ON table_1.column_name = table_2.column_name;</></code>
