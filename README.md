@@ -1,4 +1,5 @@
 # Core-Cs
+**DBMS | OS | OOP**
 <h3><code>Welcome to Core-Cs</code></h3>
 <blockquote><strong>Do you have less time for your interview preperation then you are at the right place. please follow this article  and finally  you will find that in less time you have covered almost all the  important topics related to core-cs.</strong></blockquote>
 
