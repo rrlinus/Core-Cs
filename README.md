@@ -1,6 +1,6 @@
 # Core-Cs
 <h3><code>Welcome to Core-Cs</code></h3>
-<blockquote>Do you have less time for your interview preperation then you are at the right place. please follow this article  and finally  you will find that in less time you have covered almost all the  important topics related to core-cs.</blockquote>
+<blockquote><strong>Do you have less time for your interview preperation then you are at the right place. please follow this article  and finally  you will find that in less time you have covered almost all the  important topics related to core-cs.</strong></blockquote>
 
 <h4><i>Note:currently-- I am trying to improve this section</i></h4>
 
